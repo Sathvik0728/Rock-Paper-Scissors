@@ -398,20 +398,20 @@ h1{
 
     from{
 
-        transform:
-        translate(-50%,-50%)
-        scale(0.7);
-
         opacity:0;
+
+        transform:
+        translate(-50%, -50%)
+        scale(0.7);
     }
 
     to{
 
-        transform:
-        translate(-50%,-50%)
-        scale(1);
-
         opacity:1;
+
+        transform:
+        translate(-50%, -50%)
+        scale(1);
     }
 }
 
@@ -466,102 +466,30 @@ h1{
     display:none;
 }
 
-/* Mobile Responsive */
+/* MODE POPUP */
 
-@media(max-width:768px){
+/* MODE POPUP BACKGROUND */
 
-    h1{
-
-        font-size:34px;
-    }
-
-    .subtitle{
-
-        font-size:15px;
-    }
-
-    .choices{
-
-        gap:15px;
-    }
-
-    .choices button{
-
-        width:130px;
-
-        height:130px;
-
-        font-size:45px;
-    }
-
-    .choices button span{
-
-        font-size:15px;
-    }
-
-    .player-card{
-
-        width:160px;
-
-        height:160px;
-    }
-
-    .symbol{
-
-        font-size:65px;
-    }
-
-    .vs{
-
-        font-size:35px;
-    }
-
-    .score-card{
-
-        width:140px;
-    }
-
-    .score-card span{
-
-        font-size:35px;
-    }
-
-    .result-area h2{
-
-        font-size:24px;
-    }
-
-    .winner-popup h1{
-
-        font-size:24px;
-    }
-}
-/* Mode Popup */
+/* MODE POPUP */
 
 .mode-popup{
 
     position:fixed;
 
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:100vh;
+    inset:0;
 
     background:rgba(0,0,0,0.7);
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:2000;
-
     backdrop-filter:blur(5px);
+
+    z-index:9999;
+
+    display:grid;
+
+    place-items:center;
 }
+
+/* POPUP BOX */
 
 .mode-popup-box{
 
@@ -582,9 +510,9 @@ h1{
     box-shadow:
     0 0 25px cyan,
     0 0 50px cyan;
-
-    animation:popupAnim 0.3s ease;
 }
+
+/* TEXT */
 
 .mode-popup-box h2{
 
@@ -593,9 +521,6 @@ h1{
     margin-bottom:20px;
 
     font-size:28px;
-
-    text-shadow:
-    0 0 15px cyan;
 }
 
 .mode-popup-box p{
@@ -608,6 +533,8 @@ h1{
 
     font-size:17px;
 }
+
+/* BUTTON */
 
 .mode-popup-box button{
 
@@ -627,17 +554,241 @@ h1{
     cursor:pointer;
 
     font-family:'Orbitron',sans-serif;
-
-    transition:0.3s;
 }
 
-.mode-popup-box button:hover{
+/* HIDDEN */
 
-    transform:scale(1.08);
+.hidden{
 
-    box-shadow:
-    0 0 20px cyan;
+    display:none !important;
 }
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+    .container{
+
+        padding:20px 12px;
+    }
+
+    /* TITLE */
+
+    h1{
+
+        font-size:28px;
+
+        line-height:1.4;
+
+        margin-bottom:8px;
+    }
+
+    .subtitle{
+
+        font-size:14px;
+
+        margin-bottom:18px;
+    }
+
+    /* MODE BUTTONS */
+
+    .mode-buttons{
+
+        gap:10px;
+
+        margin-bottom:20px;
+    }
+
+    .mode-buttons button{
+
+        padding:10px 16px;
+
+        font-size:12px;
+
+        border-radius:40px;
+    }
+
+    /* MODE STATUS */
+
+    .game-status h2{
+
+        font-size:20px;
+
+        text-align:center;
+    }
+
+    /* SCOREBOARD */
+
+    .scoreboard{
+
+        gap:12px;
+
+        margin-bottom:25px;
+    }
+
+    .score-card{
+
+        width:115px;
+
+        padding:14px;
+    }
+
+    .score-card h3{
+
+        font-size:15px;
+    }
+
+    .score-card span{
+
+        font-size:28px;
+    }
+
+    /* BATTLE ZONE */
+
+    .battle-zone{
+
+        flex-direction:row;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:10px;
+
+        margin-bottom:30px;
+    }
+
+    .player-card{
+
+        width:130px;
+
+        height:130px;
+
+        border-radius:18px;
+    }
+
+    .player-card h2{
+
+        font-size:16px;
+
+        margin-bottom:8px;
+    }
+
+    .symbol{
+
+        font-size:50px;
+    }
+
+    .vs{
+
+        font-size:24px;
+    }
+
+    /* GAME BUTTONS */
+
+    .choices{
+
+        gap:10px;
+
+        margin-bottom:25px;
+    }
+
+    .choices button{
+
+        width:95px;
+
+        height:95px;
+
+        border-radius:18px;
+
+        font-size:38px;
+
+        gap:5px;
+    }
+
+    .choices button span{
+
+        font-size:12px;
+    }
+
+    /* RESULT */
+
+    .result-area{
+
+        margin-bottom:20px;
+    }
+
+    .result-area h2{
+
+        font-size:18px;
+
+        line-height:1.5;
+
+        text-align:center;
+    }
+
+    /* WINNER POPUP */
+
+    .winner-popup{
+
+        width:90%;
+
+        max-width:320px;
+
+        padding:22px 18px;
+
+        border-radius:20px;
+    }
+
+    .winner-popup h1{
+
+        font-size:22px;
+
+        margin-bottom:18px;
+    }
+
+    .winner-popup button{
+
+        padding:12px 24px;
+
+        font-size:14px;
+    }
+
+    /* MODE POPUP MOBILE */
+
+    .mode-popup-box{
+
+        max-width:320px;
+
+        padding:25px 18px;
+
+        border-radius:20px;
+    }
+
+    .mode-popup-box h2{
+
+        font-size:22px;
+    }
+
+    .mode-popup-box p{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+        margin-bottom:20px;
+    }
+
+    .mode-popup-box button{
+
+        padding:12px 24px;
+
+        font-size:14px;
+    }
+}
+
+/* HIDDEN */
+
 .hidden{
 
     display:none !important;
